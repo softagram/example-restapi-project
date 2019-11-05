@@ -18,26 +18,49 @@ package foo;
 
 )
 
-public interface PetsEndpoint extends Endpointty
+public interface PetsEndpoint extends SuperEndpoint
 {
 
 @ApiOperation(
 
-        value = "creates a new pet",
+        value = "handle the pet",
 
         response = Pet.class
 
     )
 
     @RequestMapping(
+        
+        value = "kill",
 
-        method = {RequestMethod.POST},
+        method = {RequestMethod.DELETE},
 
         consumes = {"application/json"}
 
     )
 
-    DeferredResult<Pet> createPet(@RequestBody @ApiParam(name = "petRequest",value = "The payload",required = true) PetRequest var1);
+    DeferredResult<Pet> trashPet(@RequestBody @ApiParam(name = "petRequest",value = "The payload",required = true) PetRequest var1);
+
+
+@ApiOperation(
+
+        value = "adjust the pet",
+
+        response = Pet.class
+
+    )
+
+    @RequestMapping(
+        
+        value = "mod",
+
+        method = {RequestMethod.PUT},
+
+        consumes = {"application/json"}
+
+    )
+
+    DeferredResult<Pet> modPet(@RequestBody @ApiParam(name = "petRequest",value = "The payload",required = true) PetRequest var1);
 
 
 }
