@@ -8,6 +8,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="springframework:spring-web:1.2.6" level="project" />
-    <orderEntry type="module" module-name="serverside" />
+    <orderEntry type="library" exported="" name="springframework:spring-webmvc:1.2.6" level="project" />
+    <orderEntry type="library" exported="" name="spring-webmvc-1.2.6" level="project" />
   </component>
 </module>

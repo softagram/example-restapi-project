@@ -1,5 +1,14 @@
 package foo;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.async.DeferredResult;
+
 @Api(
 
     tags = {"pets"},
@@ -38,7 +47,6 @@ public interface PetsEndpoint extends SuperEndpoint
         consumes = {"application/json"}
 
     )
-
     DeferredResult<Pet> trashPet(@RequestBody @ApiParam(name = "petRequest",value = "The payload",required = true) PetRequest var1);
 
 

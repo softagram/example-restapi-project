@@ -1,7 +1,6 @@
 package com.mylib.in;
 
 
-import java.net.http.HttpHeaders;
 import java.util.Map;
 
 public interface FooBarRestClient {

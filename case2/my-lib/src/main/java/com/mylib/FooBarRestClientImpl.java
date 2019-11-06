@@ -1,28 +1,22 @@
 package com.mylib;
 
-import java.net.http.HttpHeaders;
+import java.time.MonthDay;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
 
-/*import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.ParameterizedTypeReference;
+import com.mylib.in.Case3Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
-import org.springframework.stereotype.Component;*/
 
 import com.mylib.in.Case2Response;
 import com.mylib.in.FooBarRestClient;
-import com.example.domain.response.Case4;
-import com.example.domain.response.Case3Response;
-import com.example.domain.response.Case2Response;
 import com.foo.client.RestClientImpl;
 
 /**
  * Dummy example
  */
-@Component
-@MethodTrace(logValues = true)
 public class FooBarRestClientImpl implements FooBarRestClient {
 
     @Autowired
@@ -34,13 +28,13 @@ public class FooBarRestClientImpl implements FooBarRestClient {
             "samlv2auth", "representation.roles", "channel", "userid");
 
     @Override
-    public Case2Response getCase3(String context,
+    public Case3Response getCase3(String context,
                                   String case3URI, Map<String, String> headers) {
 
         Map<String, Object> query = buildQueryWithContext(context);
         HttpHeaders httpHeaders = filterHeaders(headers);
         //restClient.setApiKey(headers.get(HEADER_API_KEY));
-        return (Case2Response) restClient.performGet(Case2Response.class, httpHeaders, query,
+        return (Case3Response) restClient.performGet(Case2Response.class, httpHeaders, query,
                 case3URI);
     }
 
@@ -55,9 +49,7 @@ public class FooBarRestClientImpl implements FooBarRestClient {
     }
 
     private Map<String, Object> buildQueryWithContext(String context) {
-        return RestClientImpl.MapBuilder.newMap()
-                                        .with(CONTEXT, context)
-                                        .build();
+        return RestClientImpl.MapBuilder.newMap();
     }
 
     private HttpHeaders filterHeaders(Map<String, String> headers) {

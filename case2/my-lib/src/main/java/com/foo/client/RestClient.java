@@ -1,6 +1,6 @@
 package com.foo.client;
 
-import java.net.http.HttpHeaders;
+import org.springframework.http.HttpHeaders;
 import java.util.Map;
 
 
