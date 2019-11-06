@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/case1/swagger_t/codes/codes.iml" filepath="$PROJECT_DIR$/case1/swagger_t/codes/codes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/case2/my-lib/src/main/libs.iml" filepath="$PROJECT_DIR$/case2/my-lib/src/main/libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/case2/my-web/src/main/serverside.iml" filepath="$PROJECT_DIR$/case2/my-web/src/main/serverside.iml" />
+      <module fileurl="file://$PROJECT_DIR$/case2/my-client/src/main/userside.iml" filepath="$PROJECT_DIR$/case2/my-client/src/main/userside.iml" />
+    </modules>
+  </component>
+</project>
